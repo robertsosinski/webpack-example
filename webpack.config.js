@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-
-const imageTypes = ['gif', 'jpeg', 'jpg', 'png', 'svg'];
 const webpack = require('webpack');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin    = require('uglifyjs-webpack-plugin');
+
+const imageTypes = ['gif', 'jpeg', 'jpg', 'png', 'svg'];
 
 module.exports = function (env) {
   const envConfig = getConfig(path.resolve('config', 'env', `${env}.json`));
@@ -44,13 +44,10 @@ module.exports = function (env) {
     fileloaderName = '[path][name]-[hash:20].[ext]';
 
     webpackPlugins.push(new UglifyJSPlugin());
-
   } else {
     outputFilename = '[name].js';
     fileloaderName = '[path][name].[ext]';
-  }
 
-  if (['development'].indexOf(env) > -1) {
     buildOptions.devtool = 'inline-source-map';
   }
 
