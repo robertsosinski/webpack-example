@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AdminLTE</title>
+
+    <link rel="stylesheet" stype="text/css" href="assets/vendor/bootstrap-3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" stype="text/css" href="assets/vendor/AdminLTE-2.4.0/css/AdminLTE.min.css" />
+    <link rel="stylesheet" stype="text/css" href="assets/vendor/AdminLTE-2.4.0/css/skins/skin-blue.min.css" />
+    <link rel="stylesheet" stype="text/css" href="assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+
+    <% if (htmlWebpackPlugin.options.window) { %>
+    <script>
+      <% for (var varName in htmlWebpackPlugin.options.window) { %>
+        window['<%=varName%>'] = <%= JSON.stringify(htmlWebpackPlugin.options.window[varName]) %>;
+      <% } %>
+    </script>
+    <% } %>
+  </head>
+
+  <body class="skin-blue">
+    <div id="wrapper">
+    </div>
+
+    <script type="text/javascript" src="assets/vendor/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/AdminLTE-2.4.0/js/adminlte.min.js"></script>
+
+    <% for (var js in htmlWebpackPlugin.files.js) { %>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
+    <% } %>
+  </body>
+</html>
