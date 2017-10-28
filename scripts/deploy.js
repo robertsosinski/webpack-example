@@ -50,5 +50,5 @@ uploader.on('end', function() {
 });
 
 function logProgress(type, uploader) {
-  console.log(`${type}:`, `  local: ${uploader.filesFound}\tremote: ${uploader.objectsFound}\tsync: ${pretty(uploader.progressMd5Amount, true, true, 1)}\ttotal: ${pretty(uploader.progressMd5Total, true, true, 1)}\tcomplete: ${parseInt((uploader.progressMd5Amount / uploader.progressMd5Total) * 100)}%\tdeleted: ${uploader.deleteTotal}` );
+  console.log(`${type}:\tlocal: ${uploader.filesFound}\tremote: ${uploader.objectsFound}\tsync: ${pretty(uploader.progressMd5Amount, true, true, 1)}\ttotal: ${pretty(uploader.progressMd5Total, true, true, 1)}\tcomplete: ${parseInt((uploader.progressMd5Amount / uploader.progressMd5Total) * 100)}%\tdeleted: ${uploader.deleteTotal}`);
 }
