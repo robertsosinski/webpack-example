@@ -10,7 +10,7 @@ export default class Content extends React.Component {
       <div>
         <section className="content-header">
           <h1>
-            About
+            About Page
             <small>{this.props.location.pathname}</small>
           </h1>
         </section>

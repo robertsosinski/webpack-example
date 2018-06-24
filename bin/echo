@@ -1,3 +1,2 @@
-#! env bash
+#! /usr/bin/env bash
 echo ${NODE_ENV:=development}
-echo "done"

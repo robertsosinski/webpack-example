@@ -1,2 +1,2 @@
-#! env bash
+#! /usr/bin/env bash
 node ./scripts/deploy.js
