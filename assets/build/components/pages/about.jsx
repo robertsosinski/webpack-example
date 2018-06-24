@@ -16,7 +16,7 @@ export default class Content extends React.Component {
         </section>
 
         <section className="content container-fluid">
-          <p>Learn all about us</p>
+          <p>Learn all about us!</p>
         </section>
       </div>
     );

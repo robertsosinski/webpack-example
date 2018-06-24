@@ -1,14 +1,6 @@
 {
   "repository": {},
   "license": "UNLICENSED",
-  "scripts": {
-    "lint": "eslint ./assets/build/**/*.js ./assets/build/**/*.jsx",
-    "clean": "rm -rf ./public/${NODE_ENV:=development}",
-    "build": "yarn run clean ; webpack --env=${NODE_ENV:=development}",
-    "watch": "yarn run clean ; webpack --watch --env=${NODE_ENV:=development}",
-    "server": "http-server ./public/${NODE_ENV:=development} -p ${HTTP_PORT:=8080} -c-1",
-    "deploy": "node ./scripts/deploy.js"
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",

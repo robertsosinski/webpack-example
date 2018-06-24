@@ -1,0 +1,3 @@
+#! env bash
+rm -rf ./public/${NODE_ENV:=development}
+echo "done"

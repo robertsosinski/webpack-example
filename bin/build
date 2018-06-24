@@ -1,0 +1,4 @@
+#! env bash
+./bin/clean
+node ./node_modules/webpack/bin/webpack.js --env=${NODE_ENV:=development}
+echo "done"
