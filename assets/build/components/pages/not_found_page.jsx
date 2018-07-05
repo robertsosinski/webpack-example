@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function NotFound(props) {
+export default function NotFoundPage(props) {
   return (
     <div>
       <section className="content-header">

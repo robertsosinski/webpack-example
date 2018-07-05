@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from '../../images/node/nodejs.png';
 
-export default class Content extends React.Component {
+export default class IndexPage extends React.Component {
   constructor(props) {
     super(props);
   }

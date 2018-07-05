@@ -87,7 +87,8 @@ module.exports = function (env) {
           ]
         },
       ]
-    }
+    },
+    target: 'node'
   };
 };
 

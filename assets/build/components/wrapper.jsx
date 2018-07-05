@@ -7,15 +7,15 @@ import Footer from './footer.jsx';
 
 const SidebarWithRouter = withRouter(Sidebar);
 
-import Index from './pages/index.jsx';
-import About from './pages/about.jsx';
-import NotFound from './pages/not_found.jsx';
+import IndexPage from './pages/index_page.jsx';
+import AboutPage from './pages/about_page.jsx';
+import NotFoundPage from './pages/not_found_page.jsx';
 
 export default class Wrapper extends React.Component {
   render() {
     const routes = [
-      {path: '/', exact: true, component: Index, text: 'Index Page', icon: 'link'},
-      {path: '/about', component: About, text: 'About Page', icon: 'user'}
+      {path: '/',      exact: true,  component: IndexPage, text: 'Index Page', icon: 'link'},
+      {path: '/about', exact: false, component: AboutPage, text: 'About Page', icon: 'user'}
     ];
 
     return (
@@ -32,7 +32,7 @@ export default class Wrapper extends React.Component {
                   <Route key={route.path} exact={route.exact} path={route.path} component={route.component}/>
                 )
               }
-              <Route component={NotFound}/>
+              <Route component={NotFoundPage}/>
             </Switch>
           </div>
 
