@@ -18,7 +18,7 @@ export default class SidebarSearch extends React.Component {
     return (
       <form onSubmit={this.handleSearch.bind(this)} className="sidebar-form" autoComplete="off">
         <div className="input-group">
-          <input type="text" name="q" className="form-control" placeholder="Search..." value={this.state.searchValue} onChange={evt => this.setState({searchValue: evt.target.value})} />
+          <input type="text" name="q" className="form-control" placeholder="Search..." value={this.state.searchValue} onChange={e => this.setState({searchValue: e.target.value})} />
           <span className="input-group-btn">
             <button type="submit" name="search" id="search-btn" className="btn btn-flat">
               <i className="fa fa-search"></i>
