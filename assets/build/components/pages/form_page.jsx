@@ -31,7 +31,7 @@ export default class FormPage extends React.Component {
       <div>
         <section className="content-header">
           <h1>
-            Menu Page
+            Form Page
             <small>{this.props.location.pathname}</small>
           </h1>
         </section>
@@ -41,7 +41,7 @@ export default class FormPage extends React.Component {
             <div className="col-md-12">
               <div className="box box-primary">
                 <div className="box-header with-border">
-                  <h3 className="box-title">Menu</h3>
+                  <h3 className="box-title">Form</h3>
                   <div className="box-tools pull-right">
                     <div className="btn-group">
                       <button className="btn btn-box-tool droptown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
