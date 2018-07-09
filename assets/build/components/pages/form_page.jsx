@@ -1,5 +1,8 @@
 import React from 'react';
 
+import ButtonLink from '../content/content_button_link.jsx';
+import ButtonSubmit from '../content/content_button_submit.jsx';
+
 export default class FormPage extends React.Component {
   constructor(props) {
     super(props);
@@ -74,15 +77,8 @@ export default class FormPage extends React.Component {
 
                   <div className="box-footer">
                     <div className="pull-right">
-                      <a href="#" className="btn btn-default" onClick={this.handleCancel.bind(this)}>
-                        <i className="fa fa-fw fa-times"></i>
-                        Cancel
-                      </a>
-                      &nbsp;
-                      <button className="btn btn-primary" type="submit">
-                        <i className="fa fa-fw fa-thumbs-up"></i>
-                        Submit
-                      </button>
+                      <ButtonLink text="Cancel" icon="times" color="default" onClick={this.handleCancel.bind(this)} />
+                      <ButtonSubmit text="Submit" icon="thumbs-up" color="primary" />
                     </div>
                   </div>
                 </form>

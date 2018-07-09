@@ -1,17 +1,18 @@
 import React from 'react';
-import {HashRouter as Router, Route, Switch, withRouter} from 'react-router-dom';
+import {HashRouter as Router, withRouter} from 'react-router-dom';
 
 import Header  from './header.jsx';
 import Sidebar from './sidebar.jsx';
+import Content from './content.jsx';
 import Footer  from './footer.jsx';
 
 const SidebarWithRouter = withRouter(Sidebar);
+const ContentWithRouter = withRouter(Content);
 
-import IndexPage    from './pages/index_page.jsx';
-import AboutPage    from './pages/about_page.jsx';
-import FormPage     from './pages/form_page.jsx';
-import MenuPage     from './pages/menu_page.jsx';
-import NotFoundPage from './pages/not_found_page.jsx';
+import IndexPage from './pages/index_page.jsx';
+import AboutPage from './pages/about_page.jsx';
+import FormPage  from './pages/form_page.jsx';
+import MenuPage  from './pages/menu_page.jsx';
 
 export default class Wrapper extends React.Component {
   render() {
@@ -26,20 +27,8 @@ export default class Wrapper extends React.Component {
       <Router>
         <div className="wrapper">
           <Header />
-
           <SidebarWithRouter routes={routes} />
-
-          <div className="content-wrapper">
-            <Switch>
-              {
-                routes.map((route) =>
-                  <Route key={route.path} exact={route.exact} path={route.path} component={route.component}/>
-                )
-              }
-              <Route component={NotFoundPage}/>
-            </Switch>
-          </div>
-
+          <ContentWithRouter routes={routes} />
           <Footer />
         </div>
       </Router>
