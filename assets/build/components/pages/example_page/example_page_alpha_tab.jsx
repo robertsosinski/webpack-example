@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class MenuPageBetaTab extends React.Component {
+export default class ExamplePageAlphaTab extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -8,8 +8,8 @@ export default class MenuPageBetaTab extends React.Component {
   render() {
     return (
       <div>
-        <h3>Beta Tab</h3>
-        <p>Here is Beta Tab</p>
+        <h3>Alpha Tab</h3>
+        <p>Here is the Alpha Tab</p>
       </div>
     );
   }

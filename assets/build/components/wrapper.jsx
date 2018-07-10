@@ -9,18 +9,18 @@ import Footer  from './footer.jsx';
 const SidebarWithRouter = withRouter(Sidebar);
 const ContentWithRouter = withRouter(Content);
 
-import IndexPage from './pages/index_page.jsx';
-import AboutPage from './pages/about_page.jsx';
-import FormPage  from './pages/form_page.jsx';
-import MenuPage  from './pages/menu_page.jsx';
+import IndexPage   from './pages/index_page.jsx';
+import AboutPage   from './pages/about_page.jsx';
+import FormPage    from './pages/form_page.jsx';
+import ExamplePage from './pages/example_page.jsx';
 
 export default class Wrapper extends React.Component {
   render() {
     const routes = [
-      {path: '/',      exact: true,  component: IndexPage, text: 'Index Page', icon: 'link'},
-      {path: '/about', exact: false, component: AboutPage, text: 'About Page', icon: 'user'},
-      {path: '/form',  exact: false, component: FormPage,  text: 'Form Page',  icon: 'chevron-circle-right'},
-      {path: '/menu',  exact: false, component: MenuPage,  text: 'Menu Page',  icon: 'table'},
+      {path: '/',        exact: true,  component: IndexPage, text: 'Index Page', icon: 'link'},
+      {path: '/about',   exact: false, component: AboutPage, text: 'About Page', icon: 'user'},
+      {path: '/form',    exact: false, component: FormPage,  text: 'Form Page',  icon: 'chevron-circle-right'},
+      {path: '/example', exact: false, component: ExamplePage,  text: 'Example Page',  icon: 'table'},
     ];
 
     return (
