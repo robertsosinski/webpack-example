@@ -1,4 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+let propTypes = {
+  id: PropTypes.string,
+  col: PropTypes.string,
+  tabs: PropTypes.array.isRequired,
+};
+
+let defaultProps = {
+  id: 'tab-box',
+  col: 'md-12',
+};
 
 export default class ContentTabBox extends React.Component {
   constructor(props) {
@@ -6,16 +18,14 @@ export default class ContentTabBox extends React.Component {
   }
 
   render() {
-    let id = this.props.id || 'tab-box';
-
     return (
       <div id={this.props.id} className={`col-${this.props.col}`}>
         <div className="nav-tabs-custom">
           <ul className="nav nav-tabs">
             {
               this.props.tabs.map((tab, idx) =>
-                <li key={`${id}-${idx}-tab`} className={idx === 0 ? 'active' : undefined}>
-                  <a href={`#${id}-${idx}`} data-toggle="tab" aria-expanded="true">
+                <li key={`${this.props.id}-${idx}-tab`} className={idx === 0 ? 'active' : undefined}>
+                  <a href={`#${this.props.id}-${idx}`} data-toggle="tab" aria-expanded="true">
                     <i className={`fa fa-fw fa-${tab.icon || 'circle'}`} />
                     &nbsp;
                     {tab.text}
@@ -40,7 +50,7 @@ export default class ContentTabBox extends React.Component {
           <div className="tab-content">
             {
               this.props.tabs.map((tab, idx) =>
-                <div key={`${id}-${idx}-content`} id={`${id}-${idx}`} className={idx === 0 ? 'tab-pane active' : 'tab-pane'}>
+                <div key={`${this.props.id}-${idx}-content`} id={`${this.props.id}-${idx}`} className={idx === 0 ? 'tab-pane active' : 'tab-pane'}>
                   {React.createElement(tab.component, {})}
                 </div>
               )
@@ -51,3 +61,6 @@ export default class ContentTabBox extends React.Component {
     );
   }
 }
+
+ContentTabBox.propTypes = propTypes;
+ContentTabBox.defaultProps = defaultProps;
