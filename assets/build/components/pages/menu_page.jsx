@@ -26,7 +26,12 @@ export default class MenuPage extends React.Component {
       <div>
         <Header title="Menu Page" subtitle={this.props.location.pathname} />
 
-        <TabBox col="md-12" tabs={tabs} />
+        <section className="content container-fluid">
+          <div className="row">
+            <TabBox id="tab-box-1" col="md-6" tabs={tabs} />
+            <TabBox id="tab-box-2" col="md-6" tabs={tabs} />
+          </div>
+        </section>
       </div>
     );
   }
