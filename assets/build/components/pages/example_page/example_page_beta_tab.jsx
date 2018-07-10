@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from '../../../images/node/nodejs.png';
 
 export default class ExamplePageBetaTab extends React.Component {
   constructor(props) {
@@ -8,8 +9,10 @@ export default class ExamplePageBetaTab extends React.Component {
   render() {
     return (
       <div>
-        <h3>Beta Tab</h3>
-        <p>Here is the Beta Tab</p>
+        <h4 class="page-header">Image</h4>
+        <section>
+          <img id="nodejs" src={Image} />
+        </section>
       </div>
     );
   }

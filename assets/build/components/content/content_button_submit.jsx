@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class ContentButtonLink extends React.Component {
+export default class ContentButtonSubmit extends React.Component {
   constructor(props) {
     super(props);
   }

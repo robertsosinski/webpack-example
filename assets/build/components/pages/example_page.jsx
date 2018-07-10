@@ -17,13 +17,13 @@ export default class ExamplePage extends React.Component {
 
   render() {
     const tabs1 = [
-      {component: AlphaTab, text: 'Alpha Tab', icon: 'plus-circle'},
-      {component: BetaTab,  text: 'Beta Tab',  icon: 'recycle'},
+      {component: AlphaTab, text: 'Alpha Tab', icon: 'lock'},
+      {component: BetaTab,  text: 'Beta Tab',  icon: 'image'},
       {component: GammaTab, text: 'Gamma Tab', icon: 'star'}
     ];
 
     const tabs2 = [
-      {component: AlphaTab, text: 'Alpha Tab', icon: 'plus-circle'}
+      {component: AlphaTab, text: 'Alpha Tab', icon: 'unlock'}
     ];
 
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class ContentTemplate extends React.Component {
+export default class ContentTabBox extends React.Component {
   constructor(props) {
     super(props);
   }

@@ -17,10 +17,10 @@ import ExamplePage from './pages/example_page.jsx';
 export default class Wrapper extends React.Component {
   render() {
     const routes = [
-      {path: '/',        exact: true,  component: IndexPage, text: 'Index Page', icon: 'link'},
-      {path: '/about',   exact: false, component: AboutPage, text: 'About Page', icon: 'user'},
-      {path: '/form',    exact: false, component: FormPage,  text: 'Form Page',  icon: 'chevron-circle-right'},
-      {path: '/example', exact: false, component: ExamplePage,  text: 'Example Page',  icon: 'table'},
+      {path: '/',        exact: true, component: IndexPage,    text: 'Index Page',   icon: 'link'},
+      {path: '/about',   exact: true, component: AboutPage,    text: 'About Page',   icon: 'user'},
+      {path: '/form',    exact: true, component: FormPage,     text: 'Form Page',    icon: 'chevron-circle-right'},
+      {path: '/example', exact: true, component: ExamplePage,  text: 'Example Page', icon: 'table'},
     ];
 
     return (
