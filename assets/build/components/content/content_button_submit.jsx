@@ -5,7 +5,6 @@ let propTypes = {
   color: PropTypes.string,
   icon: PropTypes.string,
   text: PropTypes.string,
-  onClick: PropTypes.func,
 };
 
 let defaultProps = {

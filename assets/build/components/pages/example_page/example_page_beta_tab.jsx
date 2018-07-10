@@ -9,7 +9,7 @@ export default class ExamplePageBetaTab extends React.Component {
   render() {
     return (
       <div>
-        <h4 class="page-header">Image</h4>
+        <h4 className="page-header">Image</h4>
         <section>
           <img id="nodejs" src={Image} />
         </section>
