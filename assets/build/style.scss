@@ -1,3 +1,15 @@
+.nav-tabs-custom > .nav-tabs > li.active {
+ color: #000
+}
+
+.nav-tabs-custom > .nav-tabs > li > a {
+  color: #999;
+}
+
+.nav-tabs-custom > .nav-tabs > li > a:hover {
+ color: #000
+}
+
 img#nodejs {
   width: 460px;
   height: 280px;
