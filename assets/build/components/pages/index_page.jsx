@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from '../../images/node/nodejs.png';
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -18,7 +17,6 @@ export default class IndexPage extends React.Component {
 
         <section className="content container-fluid">
           <p>{window.env.url}</p>
-          <img id="nodejs" src={Image} />
         </section>
       </div>
     );

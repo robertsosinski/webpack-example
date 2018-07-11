@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 let propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   col: PropTypes.string,
   tabs: PropTypes.array.isRequired,
 };
 
 let defaultProps = {
-  id: 'tab-box',
   col: 'md-12',
 };
 

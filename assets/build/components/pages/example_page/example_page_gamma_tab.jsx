@@ -8,7 +8,7 @@ export default class ExamplePageGammaTab extends React.Component {
   render() {
     return (
       <div>
-        <h3>Gamma Tab</h3>
+        <h4 className="page-header">Gamma Tab</h4>
         <p>Here is the Gamma Tab</p>
       </div>
     );

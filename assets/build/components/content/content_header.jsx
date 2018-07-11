@@ -1,7 +1,15 @@
-
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class ContentButtonLink extends React.Component {
+let propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+};
+
+let defaultProps = {
+};
+
+export default class ContentHeader extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -17,3 +25,6 @@ export default class ContentButtonLink extends React.Component {
     );
   }
 }
+
+ContentHeader.propTypes = propTypes;
+ContentHeader.defaultProps = defaultProps;
