@@ -1,2 +1,5 @@
 #! /usr/bin/env bash
-eslint ./assets/build/**/*.js ./assets/build/**/*.jsx
+cd ./assets/build
+eslint .
+eslint . --ext jsx
+cd ../../
