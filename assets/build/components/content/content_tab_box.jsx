@@ -5,10 +5,13 @@ let propTypes = {
   id: PropTypes.string.isRequired,
   col: PropTypes.string,
   tabs: PropTypes.array.isRequired,
+  controls: PropTypes.array.isRequired,
 };
 
 let defaultProps = {
   col: 'md-12',
+  tabs: [],
+  controls: [],
 };
 
 export default class ContentTabBox extends React.Component {
@@ -23,33 +26,29 @@ export default class ContentTabBox extends React.Component {
           <ul className="nav nav-tabs">
             {
               this.props.tabs.map((tab, idx) =>
-                <li key={`${this.props.id}-${idx}-tab`} className={idx === 0 ? 'active' : undefined}>
-                  <a href={`#${this.props.id}-${idx}`} data-toggle="tab" aria-expanded="true">
+                <li key={`${this.props.id}-pane_${idx}-tab`} className={idx === 0 ? 'active' : undefined}>
+                  <a href={`#${this.props.id}-pane-${idx}`} data-toggle="tab" aria-expanded="true">
                     <i className={`fa fa-fw fa-${tab.icon || 'circle'}`} />
                     &nbsp;
-                    {tab.text}
+                    {tab.text || 'Tab Title'}
                   </a>
                 </li>
               )
             }
-            <li className="pull-right">
-              <a className="btn btn-box-tool droptown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                <i className="fa fa-gear"></i>
-              </a>
-              <ul className="dropdown-menu" role="menu">
-                <li><a href="#">Action One</a></li>
-                <li><a href="#">Action Two</a></li>
-                <li><a href="#">Action Three</a></li>
-                <li className="divider"></li>
-                <li><a href="#">Action Four</a></li>
-              </ul>
-            </li>
+
+            {
+              this.props.controls.map((control, idx) => {
+                let keyId = `${this.props.id}-control-${idx}`;
+
+                return React.createElement(control.component, {key: keyId, id: keyId, icon: control.icon});
+              })
+            }
           </ul>
 
           <div className="tab-content">
             {
               this.props.tabs.map((tab, idx) =>
-                <div key={`${this.props.id}-${idx}-content`} id={`${this.props.id}-${idx}`} className={idx === 0 ? 'tab-pane active' : 'tab-pane'}>
+                <div key={`${this.props.id}-pane-${idx}-content`} id={`${this.props.id}-pane-${idx}`} className={idx === 0 ? 'tab-pane active' : 'tab-pane'}>
                   {React.createElement(tab.component, {})}
                 </div>
               )
