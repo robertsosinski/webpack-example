@@ -4,11 +4,10 @@ import Header from '../content/content_header.jsx';
 import TabBox from '../content/content_tab_box.jsx';
 
 import AlphaTab from './example_page/example_page_alpha_tab.jsx';
-import BetaTab  from './example_page/example_page_beta_tab.jsx';
-import GammaTab from './example_page/example_page_gamma_tab.jsx';
+import BravoTab  from './example_page/example_page_bravo_tab.jsx';
+import CharlieTab from './example_page/example_page_charlie_tab.jsx';
 
-import GearControl from './example_page/example_page_gear_control.jsx';
-import PlusControl from './example_page/example_page_gear_control.jsx';
+import ZuluControl from './example_page/example_page_zulu_control.jsx';
 
 export default class ExamplePage extends React.Component {
   constructor(props) {
@@ -20,21 +19,21 @@ export default class ExamplePage extends React.Component {
 
   render() {
     const tabs0 = [
-      {component: AlphaTab, text: 'Alpha Tab', icon: 'lock'},
-      {component: BetaTab,  text: 'Beta Tab',  icon: 'image'},
-      {component: GammaTab, text: 'Gamma Tab', icon: 'star'}
+      {component: AlphaTab,   text: 'Alpha Tab', icon: 'lock'},
+      {component: BravoTab,   text: 'Bravo Tab',  icon: 'image'},
+      {component: CharlieTab, text: 'Charlie Tab', icon: 'star'}
     ];
 
     const tabs1 = [
-      {component: AlphaTab, text: 'Alpha Tab', icon: 'unlock'}
+      {component: AlphaTab, text: 'Alpha Tab Two', icon: 'unlock'}
     ];
 
     const controls0 = [
-      {component: GearControl, icon: 'gear'},
+      {component: ZuluControl, icon: 'gear'},
     ];
 
     const controls1 = [
-      {component: PlusControl, icon: 'plus'},
+      {component: ZuluControl, icon: 'plus'},
     ];
 
     return (

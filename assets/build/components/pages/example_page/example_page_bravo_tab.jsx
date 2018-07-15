@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from '../../../images/node/nodejs.png';
 
-export default class ExamplePageBetaTab extends React.Component {
+export default class ExamplePageBravoTab extends React.Component {
   constructor(props) {
     super(props);
   }
