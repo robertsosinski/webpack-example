@@ -1,8 +1,25 @@
 import React from 'react';
 
+import Store from '../../services/store.js';
+
 export default class IndexPage extends React.Component {
   constructor(props) {
     super(props);
+
+    this.things = new Store('things');
+
+    this.state = {
+      things: this.things.all()
+    };
+  }
+
+  handleAddThing(e) {
+    let val = {id: 123, name: 'My Thing'};
+
+    this.things.add(val);
+
+    this.setState({things: this.things.all()});
+    e.preventDefault();
   }
 
   render() {
@@ -17,6 +34,16 @@ export default class IndexPage extends React.Component {
 
         <section className="content container-fluid">
           <p>{window.env.url}</p>
+
+          <ul>
+            {
+              this.state.things.map((thing, idx) =>
+                <li key={idx}>{thing.name}</li>
+              )
+            }
+          </ul>
+
+          <a href="#" onClick={this.handleAddThing.bind(this)}>Add</a>
         </section>
       </div>
     );

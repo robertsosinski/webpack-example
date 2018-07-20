@@ -6,6 +6,7 @@ import TabBox from '../content/content_tab_box.jsx';
 import AlphaTab from './example_page/example_page_alpha_tab.jsx';
 import BravoTab  from './example_page/example_page_bravo_tab.jsx';
 import CharlieTab from './example_page/example_page_charlie_tab.jsx';
+import DeltaTab from './example_page/example_page_delta_tab.jsx';
 
 import ZuluControl from './example_page/example_page_zulu_control.jsx';
 
@@ -25,7 +26,7 @@ export default class ExamplePage extends React.Component {
     ];
 
     const tabs1 = [
-      {component: AlphaTab, text: 'Alpha Tab Two', icon: 'unlock'}
+      {component: DeltaTab, text: 'Delta Tab', icon: 'unlock'}
     ];
 
     const controls0 = [
@@ -33,7 +34,7 @@ export default class ExamplePage extends React.Component {
     ];
 
     const controls1 = [
-      {component: ZuluControl, icon: 'plus'},
+      {component: ZuluControl, icon: 'list'},
     ];
 
     return (

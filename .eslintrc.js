@@ -21,6 +21,7 @@ module.exports = {
   "globals": {
     "window": true,
     "document": true,
+    "localStorage": true,
     "alert": true,
     "$": true
   },
