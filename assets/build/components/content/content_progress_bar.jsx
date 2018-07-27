@@ -10,7 +10,7 @@ let propTypes = {
 
 let defaultProps = {
   color: 'blue',
-  size: 'xs',
+  size: 'sm',
 };
 
 export default class ContentProgressBar extends React.Component {

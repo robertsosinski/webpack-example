@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Input from '../../content/content_input.jsx';
+import Button from '../../content/content_button.jsx';
 import ButtonLink from '../../content/content_button_link.jsx';
-import ButtonSubmit from '../../content/content_button_submit.jsx';
 
 export default class ExamplePageAlphaTab extends React.Component {
   constructor(props) {
@@ -40,7 +40,7 @@ export default class ExamplePageAlphaTab extends React.Component {
         </section>
         <section>
           <ButtonLink text="Cancel" icon="times" color="default" onClick={this.handleCancel.bind(this)} />
-          <ButtonSubmit text="Submit" icon="thumbs-up" color="primary" />
+          <Button text="Submit" icon="thumbs-up" color="primary" type="submit" />
         </section>
       </form>
     );

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 let propTypes = {
   id: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
 };
 
 let defaultProps = {
   icon: 'circle',
 };
 
-export default class ContentTabBoxControlDropdown extends React.Component {
+export default class ContentTabBoxDropdownControl extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -29,5 +29,5 @@ export default class ContentTabBoxControlDropdown extends React.Component {
   }
 }
 
-ContentTabBoxControlDropdown.propTypes = propTypes;
-ContentTabBoxControlDropdown.defaultProps = defaultProps;
+ContentTabBoxDropdownControl.propTypes = propTypes;
+ContentTabBoxDropdownControl.defaultProps = defaultProps;

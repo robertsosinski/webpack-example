@@ -17,7 +17,7 @@ export default class ContentTable extends React.Component {
 
   render() {
     return (
-      <table className="table">
+      <table className="table table-hover">
         <thead>
           <tr>
             {

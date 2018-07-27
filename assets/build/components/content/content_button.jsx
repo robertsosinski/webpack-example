@@ -10,7 +10,8 @@ let propTypes = {
 let defaultProps = {
   color: 'primary',
   icon: 'circle',
-  text: 'Submit Button',
+  text: 'Submit',
+  type: 'button',
 };
 
 export default class ContentButtonSubmit extends React.Component {
@@ -21,7 +22,7 @@ export default class ContentButtonSubmit extends React.Component {
   render() {
     return (
       <span>
-        <button className={`btn btn-${this.props.color}`} type="submit">
+        <button className={`btn btn-${this.props.color}`} type={this.props.type}>
           <i className={`fa fa-fw fa-${this.props.icon}`}></i>
           {this.props.text || 'Button'}
         </button>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Dropdown from '../../content/content_tab_box_control_dropdown.jsx';
+import Dropdown from '../../content/content_tab_box_dropdown_control.jsx';
 
-export default class ExamplePageZuluControl extends React.Component {
+export default class ExamplePageDropdownControl extends React.Component {
   constructor(props) {
     super(props);
   }

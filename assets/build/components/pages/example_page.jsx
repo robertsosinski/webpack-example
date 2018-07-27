@@ -2,13 +2,14 @@ import React from 'react';
 
 import Header from '../content/content_header.jsx';
 import TabBox from '../content/content_tab_box.jsx';
+import ModalControl from '../content/content_tab_box_modal_control.jsx';
 
 import AlphaTab from './example_page/example_page_alpha_tab.jsx';
 import BravoTab  from './example_page/example_page_bravo_tab.jsx';
 import CharlieTab from './example_page/example_page_charlie_tab.jsx';
 import DeltaTab from './example_page/example_page_delta_tab.jsx';
 
-import ZuluControl from './example_page/example_page_zulu_control.jsx';
+import DropdownControl from './example_page/example_page_dropdown_control.jsx';
 
 export default class ExamplePage extends React.Component {
   constructor(props) {
@@ -26,15 +27,15 @@ export default class ExamplePage extends React.Component {
     ];
 
     const tabs1 = [
-      {component: DeltaTab, text: 'Delta Tab', icon: 'unlock'}
+      {component: DeltaTab, text: 'Delta Tab', icon: 'list'}
     ];
 
     const controls0 = [
-      {component: ZuluControl, icon: 'gear'},
+      {component: DropdownControl, icon: 'gear'},
     ];
 
     const controls1 = [
-      {component: ZuluControl, icon: 'list'},
+      {component: ModalControl, icon: 'plus'},
     ];
 
     return (

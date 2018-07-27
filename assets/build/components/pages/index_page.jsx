@@ -16,9 +16,7 @@ export default class IndexPage extends React.Component {
   handleAddThing(e) {
     let val = {id: 123, name: 'My Thing'};
 
-    this.things.add(val);
-
-    this.setState({things: this.things.all()});
+    this.setState({things: this.things.add(val)});
     e.preventDefault();
   }
 

@@ -23,7 +23,7 @@ export default class ContentButtonLink extends React.Component {
   render() {
     return (
       <span>
-        <a href="#" className={`btn btn-${this.props.color}`} onClick={this.props.onClick || this.defaultOnClick}>
+        <a href="#" className={`btn btn-${this.props.color}`} onClick={this.props.onClick}>
           <i className={`fa fa-fw fa-${this.props.icon}`}></i>
           {this.props.text}
         </a>
