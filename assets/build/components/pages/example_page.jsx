@@ -2,12 +2,15 @@ import React from 'react';
 
 import Header from '../content/content_header.jsx';
 import TabBox from '../content/content_tab_box.jsx';
+
+import Modal from '../content/content_modal.jsx';
 import ModalControl from '../content/content_tab_box_modal_control.jsx';
 
 import AlphaTab from './example_page/example_page_alpha_tab.jsx';
 import BravoTab  from './example_page/example_page_bravo_tab.jsx';
 import CharlieTab from './example_page/example_page_charlie_tab.jsx';
 import DeltaTab from './example_page/example_page_delta_tab.jsx';
+import DeltaModal from './example_page/example_page_delta_modal.jsx';
 
 import DropdownControl from './example_page/example_page_dropdown_control.jsx';
 
@@ -35,7 +38,7 @@ export default class ExamplePage extends React.Component {
     ];
 
     const controls1 = [
-      {component: ModalControl, icon: 'plus'},
+      {component: ModalControl, icon: 'plus', id: 'modal-default'},
     ];
 
     return (
@@ -48,6 +51,8 @@ export default class ExamplePage extends React.Component {
             <TabBox id="tab-box-1" col="md-6" tabs={tabs1} controls={controls1} />
           </div>
         </section>
+
+        <Modal id="modal-default" title="Delta Modal" body={DeltaModal} />
       </div>
     );
   }
