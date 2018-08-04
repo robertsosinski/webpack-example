@@ -15,10 +15,6 @@ let defaultProps = {
 };
 
 export default class ContentButtonSubmit extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <span>

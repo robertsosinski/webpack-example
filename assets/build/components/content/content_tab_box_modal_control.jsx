@@ -11,10 +11,6 @@ let defaultProps = {
 };
 
 export default class ContentTabBoxModalControl extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <li id={this.props.id} className="pull-right">

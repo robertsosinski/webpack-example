@@ -13,10 +13,6 @@ let defaultProps = {
 };
 
 export default class ContentModal extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className={`modal modal-${this.props.type} fade in`} id={this.props.id} style={{display: 'block', paddingRight: '17px'}}>

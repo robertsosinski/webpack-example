@@ -3,10 +3,6 @@ import React from 'react';
 import Dropdown from '../../content/content_tab_box_dropdown_control.jsx';
 
 export default class ExamplePageDropdownControl extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Dropdown id={this.props.id} icon={this.props.icon}>

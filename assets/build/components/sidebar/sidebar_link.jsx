@@ -3,10 +3,6 @@ import React from 'react';
 import {NavLink as Link, matchPath} from 'react-router-dom';
 
 export default class SidebarLink extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render () {
     var route = this.props.route;
     var isActive;

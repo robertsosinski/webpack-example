@@ -12,10 +12,6 @@ let defaultProps = {
 };
 
 export default class ContentBadge extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     var color = this.props.color;
     var value = this.props.value;

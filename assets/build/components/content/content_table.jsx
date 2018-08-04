@@ -11,10 +11,6 @@ let defaultProps = {
 };
 
 export default class ContentTable extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <table className="table table-hover">

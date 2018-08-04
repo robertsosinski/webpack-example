@@ -10,10 +10,6 @@ let defaultProps = {
 };
 
 export default class ContentHeader extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <section className="content-header">

@@ -5,10 +5,6 @@ import Badge from '../../content/content_badge.jsx';
 import ProgressBar from '../../content/content_progress_bar.jsx';
 
 export default class ExamplePageDeltaTab extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const legend = [[40, 'yellow'], [60, 'blue'], [100, 'green']];
 

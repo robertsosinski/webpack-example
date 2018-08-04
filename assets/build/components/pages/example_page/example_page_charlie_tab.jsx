@@ -1,10 +1,6 @@
 import React from 'react';
 
 export default class ExamplePageCharlieTab extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>

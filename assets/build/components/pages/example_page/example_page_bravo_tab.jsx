@@ -2,10 +2,6 @@ import React from 'react';
 import Image from '../../../images/node/nodejs.png';
 
 export default class ExamplePageBravoTab extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>

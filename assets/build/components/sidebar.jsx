@@ -4,10 +4,6 @@ import SidebarSearch from './sidebar/sidebar_search.jsx';
 import SidebarLink from './sidebar/sidebar_link.jsx';
 
 export default class Sidebar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <aside className="main-sidebar">
