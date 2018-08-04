@@ -6,9 +6,11 @@ let propTypes = {
   color: PropTypes.string,
   legend: PropTypes.array,
   size: PropTypes.string,
+  active: PropTypes.bool,
 };
 
 let defaultProps = {
+  active: false,
   color: 'blue',
   size: 'sm',
 };
@@ -19,8 +21,9 @@ export default class ContentProgressBar extends React.Component {
   }
 
   render() {
-    var color = this.props.color;
-    var value = this.props.value;
+    var color  = this.props.color;
+    var value  = this.props.value;
+    var active = this.props.active ? 'progress-striped active' : '';
 
     if (this.props.legend) {
       this.props.legend.forEach(function(i) {
@@ -29,7 +32,7 @@ export default class ContentProgressBar extends React.Component {
     } 
 
     return (
-      <div className={`progress progress-${this.props.size} progress-striped active`}>
+      <div className={`progress progress-${this.props.size} ${active}`}>
         <div className={`progress-bar progress-bar-${color}`} style={{width: `${this.props.value}%`}}></div>
       </div>
     );

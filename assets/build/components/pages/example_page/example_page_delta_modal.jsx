@@ -25,7 +25,7 @@ export default class ExamplePageDeltaModal extends React.Component {
 
   handleSubmit (event) {
     console.log(event);
-    alert(`You've submitted name: "${this.state.emailAddress}" and progress: "${this.state.password}"`);
+    alert(`You've submitted name: "${this.state.name}" and progress: "${this.state.progress}%"`);
     event.preventDefault();
   }
 
@@ -33,8 +33,8 @@ export default class ExamplePageDeltaModal extends React.Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <section>
-          <Input id="delta-name" label="Name" name="name" type="text" placeholder="Task Name..." value={this.state.name} onChange={this.handleInputChange.bind(this)} />
-          <Input id="delta-progress" label="Progress" name="progress" type="text" placeholder="Progress..." value={this.state.progress} onChange={this.handleInputChange.bind(this)} />
+          <Input id="delta-name" label="Name" name="name" type="text" placeholder="Name..." value={this.state.name} onChange={this.handleInputChange.bind(this)} />
+          <Input id="delta-progress" label="Progress" name="progress" type="number" placeholder="Progress..." value={this.state.progress} onChange={this.handleInputChange.bind(this)} />
         </section>
         <section>
           <Button text="Close" icon="times" color="default" data-dismiss="modal" />
