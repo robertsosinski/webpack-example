@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Input from '../../content/content_input.jsx';
-import Button from '../../content/content_button.jsx';
+import ButtonSubmit from '../../content/content_button_submit.jsx';
 import ButtonLink from '../../content/content_button_link.jsx';
 
 export default class ExamplePageAlphaTab extends React.Component {
@@ -40,7 +40,7 @@ export default class ExamplePageAlphaTab extends React.Component {
         </section>
         <section>
           <ButtonLink text="Cancel" icon="times" color="default" onClick={this.handleCancel.bind(this)} />
-          <Button text="Submit" icon="thumbs-up" color="primary" type="submit" />
+          <ButtonSubmit text="Submit" icon="thumbs-up" color="primary" />
         </section>
       </form>
     );

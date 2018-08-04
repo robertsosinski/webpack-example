@@ -1,7 +1,8 @@
 import React from 'react';
 
 import Input from '../../content/content_input.jsx';
-import Button from '../../content/content_button.jsx';
+import ButtonSubmit from '../../content/content_button_submit.jsx';
+import ButtonLink from '../../content/content_button_link.jsx';
 
 export default class ExamplePageDeltaModal extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ export default class ExamplePageDeltaModal extends React.Component {
   handleCancel (event) {
     console.log(event);
     this.setState({name: '', progress: ''});
+    $(`#${this.props.modal.props.id}`).modal('hide');
     event.preventDefault();
   }
 
@@ -37,8 +39,8 @@ export default class ExamplePageDeltaModal extends React.Component {
           <Input id="delta-progress" label="Progress" name="progress" type="number" placeholder="Progress..." value={this.state.progress} onChange={this.handleInputChange.bind(this)} />
         </section>
         <section>
-          <Button text="Close" icon="times" color="default" data-dismiss="modal" />
-          <Button text="Submit" icon="thumbs-up" color="primary" type="submit" />
+          <ButtonLink text="Close" icon="times" color="default" onClick={this.handleCancel.bind(this)} />
+          <ButtonSubmit text="Submit" icon="thumbs-up" color="primary" />
         </section>
       </form>
     );

@@ -25,7 +25,7 @@ export default class ContentModal extends React.Component {
               <h4 className="modal-title">{this.props.title}</h4>
             </div>
             <div className="modal-body">
-              {React.createElement(this.props.body, {})}
+              {React.createElement(this.props.body, {modal: this})}
             </div>
           </div>
         </div>

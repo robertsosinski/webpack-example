@@ -5,22 +5,19 @@ let propTypes = {
   color: PropTypes.string,
   icon: PropTypes.string,
   text: PropTypes.string,
-  onClick: PropTypes.func,
 };
 
 let defaultProps = {
   color: 'primary',
   icon: 'circle',
   text: 'Submit',
-  type: 'button',
-  onClick: (e) => { e.preventDefault(); },
 };
 
-export default class ContentButton extends React.Component {
+export default class ContentButtonSubmit extends React.Component {
   render() {
     return (
       <span>
-        <button className={`btn btn-${this.props.color}`} type={this.props.type} onClick={this.props.onClick}>
+        <button className={`btn btn-${this.props.color}`} type="submit">
           <i className={`fa fa-fw fa-${this.props.icon}`}></i>
           {this.props.text || 'Button'}
         </button>
@@ -30,5 +27,5 @@ export default class ContentButton extends React.Component {
   }
 }
 
-ContentButton.propTypes = propTypes;
-ContentButton.defaultProps = defaultProps;
+ContentButtonSubmit.propTypes = propTypes;
+ContentButtonSubmit.defaultProps = defaultProps;
