@@ -38,7 +38,7 @@ export default class ExamplePage extends React.Component {
     ];
 
     const controls1 = [
-      {component: ModalControl, icon: 'plus', id: 'modal-default'},
+      {component: ModalControl, icon: 'plus', data: {target: 'delta-modal-default'}},
     ];
 
     return (
@@ -52,7 +52,7 @@ export default class ExamplePage extends React.Component {
           </div>
         </section>
 
-        <Modal id="modal-default" title="Delta Modal" body={DeltaModal} />
+        <Modal id="delta-modal-default" title="Delta Modal" body={DeltaModal} />
       </div>
     );
   }

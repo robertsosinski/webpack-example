@@ -36,7 +36,7 @@ export default class ContentTabBox extends React.Component {
               this.props.controls.map((control, idx) => {
                 let keyId = `${this.props.id}-control-${idx}`;
 
-                return React.createElement(control.component, {key: keyId, id: keyId, icon: control.icon});
+                return React.createElement(control.component, {key: keyId, id: keyId, icon: control.icon, data: control.data});
               })
             }
           </ul>
