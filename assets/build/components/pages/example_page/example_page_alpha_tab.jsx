@@ -13,7 +13,7 @@ export default class ExamplePageAlphaTab extends React.Component {
     this.state = {
       emailAddress: '',
       password: '',
-      sending: false,
+      waiting: false,
     };
   }
 
@@ -32,7 +32,7 @@ export default class ExamplePageAlphaTab extends React.Component {
 
     event.preventDefault();
 
-    this.setState({sending: true});
+    this.setState({waiting: true});
 
     console.log(event);
 
@@ -41,7 +41,7 @@ export default class ExamplePageAlphaTab extends React.Component {
       try {
         setTimeout(function() {
           alert(`You've submitted emailAddress: "${self.state.emailAddress}" and password: "${self.state.password}"`);
-          self.setState({sending: false});
+          self.setState({waiting: false});
           resolve(this._idleStart);
         }, 2000);
       } catch (e) {
@@ -61,7 +61,7 @@ export default class ExamplePageAlphaTab extends React.Component {
         </section>
         <section>
           <ButtonLink text="Cancel" icon="times" color="default" onClick={this.handleCancel.bind(this)} />
-          <ButtonSubmit text="Submit" icon="thumbs-up" color="primary" sending={this.state.sending} />
+          <ButtonSubmit text="Submit" icon="thumbs-up" color="primary" waiting={this.state.waiting} />
         </section>
       </form>
     );
