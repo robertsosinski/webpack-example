@@ -29,7 +29,8 @@ export default class Store {
   }
 
   del(idx) {
-    let data = this.all().splice(idx, 1);
+    let data = this.all();
+    data.splice(idx, 1);
     localStorage.setItem(this.namespace, JSON.stringify(data));
     return data;
   }

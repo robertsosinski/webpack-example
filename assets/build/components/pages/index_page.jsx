@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Store from '../../services/store.js';
+import moment from 'moment';
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -14,9 +15,15 @@ export default class IndexPage extends React.Component {
   }
 
   handleAddThing(e) {
-    let val = {id: 123, name: 'My Thing'};
+    let val = {date: moment().format()};
 
     this.setState({things: this.things.add(val)});
+    e.preventDefault();
+  }
+
+  handleDelThing(e, idx) {
+    console.log('hello');
+    this.setState({things: this.things.del(idx)});
     e.preventDefault();
   }
 
@@ -36,7 +43,10 @@ export default class IndexPage extends React.Component {
           <ul>
             {
               this.state.things.map((thing, idx) =>
-                <li key={idx}>{thing.name}</li>
+                <li key={idx}>
+                  <span>{thing.date}</span>
+                  <a href="#" onClick={(e) => { this.handleDelThing(e, idx); }}>x</a>
+                </li>
               )
             }
           </ul>
