@@ -45,7 +45,7 @@ export default class IndexPage extends React.Component {
               this.state.things.map((thing, idx) =>
                 <li key={idx}>
                   <span>{thing.date}</span>
-                  <a href="#" onClick={(e) => { this.handleDelThing(e, idx); }}>x</a>
+                  <a href="#" onClick={(e) => this.handleDelThing(e, idx)}>x</a>
                 </li>
               )
             }

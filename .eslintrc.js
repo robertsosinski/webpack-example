@@ -37,6 +37,8 @@ module.exports = {
       ["error", "always"],
     "linebreak-style":
       ["error", "unix"],
+    "no-unused-vars":
+      ["error", {"argsIgnorePattern": "^_"}],
 
     "no-console": "off",
 
