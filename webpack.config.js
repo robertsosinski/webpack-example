@@ -26,7 +26,7 @@ module.exports = function (env) {
     }]),
     new HtmlWebpackPlugin({
       inject: false,
-      template: path.resolve('assets', 'build', 'index.html'),
+      template: path.resolve('assets', 'build', 'index.html.ejs'),
       filename: path.resolve('public', env, 'index.html'),
       window: {
         env: envConfig
