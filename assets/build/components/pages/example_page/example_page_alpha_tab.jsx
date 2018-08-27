@@ -37,7 +37,6 @@ export default class ExamplePageAlphaTab extends React.Component {
     console.log(event);
 
     new Promise(function(resolve, reject) {
-
       try {
         setTimeout(function() {
           alert(`You've submitted emailAddress: "${self.state.emailAddress}" and password: "${self.state.password}"`);
@@ -53,14 +52,14 @@ export default class ExamplePageAlphaTab extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
+      <form onSubmit={(e) => this.handleSubmit(e)}>
         <h4 className="page-header">Login</h4>
         <section>
           <Input id="alpha-email-address" label="Email Address" name="emailAddress" type="email" placeholder="Put Email Address Here..." value={this.state.emailAddress} onChange={this.handleInputChange.bind(this)} />
           <Input id="alpha-password" label="Password" name="password" type="password" placeholder="Choose Something Strong..." value={this.state.password} onChange={this.handleInputChange.bind(this)} />
         </section>
         <section>
-          <ButtonLink text="Cancel" icon="times" color="default" onClick={this.handleCancel.bind(this)} />
+          <ButtonLink text="Cancel" icon="times" color="default" onClick={(e) => this.handleCancel(e)} />
           <ButtonSubmit text="Submit" icon="thumbs-up" color="primary" waiting={this.state.waiting} />
         </section>
       </form>
