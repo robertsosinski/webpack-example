@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
 cd ./assets/build
-eslint .
-eslint . --ext jsx
+../../node_modules/.bin/eslint .
+../../node_modules/.bin/eslint . --ext jsx
 cd ../../
