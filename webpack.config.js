@@ -5,8 +5,10 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin    = require('uglifyjs-webpack-plugin');
+const ManifestPlugin    = require('webpack-manifest-plugin');
 
 const imageTypes = ['gif', 'jpeg', 'jpg', 'png', 'svg'];
+const packageEnv = ['production', 'staging'];
 
 module.exports = function (env) {
   const envConfig = getConfig(path.resolve('config', 'env', `${env}.json`));
@@ -32,14 +34,19 @@ module.exports = function (env) {
         env: envConfig
       }
     }),
+    new ManifestPlugin({
+      filter: function(obj) {
+        return obj.path.match(new RegExp('^assets/*'));
+      }
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(env)
       }
-    })
+    }),
   ];
 
-  if (['production', 'staging'].indexOf(env) > -1) {
+  if (packageEnv.indexOf(env) > -1) {
     outputFilename = '[name]-[hash:20].js';
     fileloaderName = '[path][name]-[hash:20].[ext]';
 

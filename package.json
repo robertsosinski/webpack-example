@@ -21,7 +21,8 @@
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-manifest-plugin": "^2.0.3"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
