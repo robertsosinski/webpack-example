@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin    = require('uglifyjs-webpack-plugin');
-const ManifestPlugin    = require('webpack-manifest-plugin');
 
 const imageTypes = ['gif', 'jpeg', 'jpg', 'png', 'svg'];
 const packageEnv = ['production', 'staging'];
@@ -20,23 +19,18 @@ module.exports = function (env) {
 
   var webpackPlugins = [
     new CopyWebpackPlugin([{
-      from: path.resolve('assets', 'static'),
+      from: path.resolve('src', 'static'),
       to: path.resolve('public', env)
     }, {
-      from: path.resolve('assets', 'vendor'),
+      from: path.resolve('src', 'assets', 'vendor'),
       to: path.resolve('public', env, 'assets', 'vendor')
     }]),
     new HtmlWebpackPlugin({
       inject: false,
-      template: path.resolve('assets', 'build', 'index.html.ejs'),
+      template: path.resolve('src', 'pages', 'index.html.ejs'),
       filename: path.resolve('public', env, 'index.html'),
       window: {
         env: envConfig
-      }
-    }),
-    new ManifestPlugin({
-      filter: function(obj) {
-        return obj.path.match(new RegExp('^assets/*'));
       }
     }),
     new webpack.DefinePlugin({
@@ -59,8 +53,9 @@ module.exports = function (env) {
   }
 
   return {
+    context: path.resolve('src'),
     entry: {
-      build: path.resolve('assets', 'build'),
+      build: path.resolve('src', 'assets', 'build'),
     },
     plugins: webpackPlugins,
     output: {
