@@ -10,6 +10,7 @@ module.exports = {
     "react",
     "babel"
   ],
+
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
