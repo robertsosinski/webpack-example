@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Header from '../content/content_header.jsx';
-import TabBox from '../content/content_tab_box.jsx';
+import Header from '~/components/content/content_header.jsx';
+import TabBox from '~/components/content/content_tab_box.jsx';
 
-import Modal from '../content/content_modal.jsx';
-import ModalControl from '../content/content_tab_box_modal_control.jsx';
+import Modal from '~/components/content/content_modal.jsx';
+import ModalControl from '~/components/content/content_tab_box_modal_control.jsx';
 
 import AlphaTab from './example_page/example_page_alpha_tab.jsx';
 import BravoTab  from './example_page/example_page_bravo_tab.jsx';

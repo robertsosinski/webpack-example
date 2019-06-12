@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Dropdown from '../../content/content_tab_box_dropdown_control.jsx';
+import Dropdown from '~/components/content/content_tab_box_dropdown_control.jsx';
 
 export default class ExamplePageDropdownControl extends React.Component {
   render() {

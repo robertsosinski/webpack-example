@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../../images/node/nodejs.png';
+import Image from '~/images/node/nodejs.png';
 
 export default class ExamplePageBravoTab extends React.Component {
   render() {

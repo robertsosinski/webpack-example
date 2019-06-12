@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Store from '../../services/store.js';
+import Store from '~/services/store.js';
 import moment from 'moment';
 
 export default class IndexPage extends React.Component {

@@ -2,9 +2,9 @@ import Promise from 'bluebird';
 
 import React from 'react';
 
-import Input from '../../content/content_input.jsx';
-import ButtonSubmit from '../../content/content_button_submit.jsx';
-import ButtonLink from '../../content/content_button_link.jsx';
+import Input from '~/components/content/content_input.jsx';
+import ButtonSubmit from '~/components/content/content_button_submit.jsx';
+import ButtonLink from '~/components/content/content_button_link.jsx';
 
 export default class ExamplePageAlphaTab extends React.Component {
   constructor(props) {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Table from '../../content/content_table.jsx';
-import Badge from '../../content/content_badge.jsx';
-import ProgressBar from '../../content/content_progress_bar.jsx';
+import Table from '~/components/content/content_table.jsx';
+import Badge from '~/components/content/content_badge.jsx';
+import ProgressBar from '~/components/content/content_progress_bar.jsx';
 
 export default class ExamplePageDeltaTab extends React.Component {
   render() {
