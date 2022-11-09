@@ -13,7 +13,7 @@
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-react": "^7.10.0",
     "file-loader": "^1.1.11",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "http-server": "^0.11.0",
     "node-sass": "^4.12.0",
     "prettysize": "^1.1.0",
